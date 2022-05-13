@@ -9,6 +9,7 @@ let samsung = new Mobile("Samsung", "Nuevo", "Samsung", "256GB", "Blanco", true,
 let arN:Mobile[] = [];
 arN.push(xiaomi, iPhone, nokia, samsung);
 
-let libreria = new MobileLibrary("Libería 1", "Primero", arN);
+let libreria = new MobileLibrary("Libería 1", "Primero", arN,);
 
-console.log(libreria.totalPriceCalculation())
+//libreria.totalPriceCalculation()
+libreria.printLibrary()

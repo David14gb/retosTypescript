@@ -10,6 +10,7 @@ export class MobileLibrary{
         this.name = name
         this.location = location
         this.mobiles = mobiles
+        this.totalPrice = this.totalPriceCalculation()
     }
     public getName():string{
         return this.name
@@ -35,12 +36,21 @@ export class MobileLibrary{
     public setTotalPrice(totalPrice:number){
         this.totalPrice = totalPrice
     }
-    totalPriceCalculation(){
+    private totalPriceCalculation():number{
         let precio:number = 0;
         for(let i = 0; i < this.mobiles.length; i++){
             precio += this.mobiles[i].getPrice()
         }
+
+        return precio
+    }
+    printLibrary():void{
+        let precio:string= ""
+        for(let i = 0; i < this.mobiles.length; i++){
+            precio += "This is all my mobiles: " + "\n" + this.mobiles[i].printCarac() + "\n" +
+            "Price overall: " + this.totalPriceCalculation()
+        }
+        console.log(precio);
         
-        return "La suma de los precios es " + precio
     }
 }
