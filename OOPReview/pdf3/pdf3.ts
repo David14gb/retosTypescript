@@ -46,11 +46,14 @@ export class MobileLibrary{
     }
     printLibrary():void{
         let precio:string= ""
+        console.log("This is all my mobiles: ");
+        
         for(let i = 0; i < this.mobiles.length; i++){
-            precio += "This is all my mobiles: " + "\n" + this.mobiles[i].printCarac() + "\n" +
-            "Price overall: " + this.totalPriceCalculation()
+
+            //precio += "This is all my mobiles: " + "\n" + this.mobiles[i].printCarac() + "\n"
+            this.mobiles[i].printCarac();
         }
-        console.log(precio);
+        console.log("Price overall: " + this.totalPriceCalculation());
         
     }
 }

@@ -70,7 +70,7 @@ export class Mobile{
     public setPrice(price:number){
         this.price = price
     }
-    printCarac(){
+    printCarac():void{
         console.log("The Characteristics of the mobile " + this.name + " are:" + "\n" +
         "Name: " + this.name + "\n" + "Model: " + this.model + "\n" + "Trademark" + this.trademark + "\n" +
         "SD Size (GB): " + this.sdSize + "\n" + "Color: " + this.color + "\n" 
